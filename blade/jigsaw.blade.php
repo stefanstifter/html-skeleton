@@ -27,5 +27,9 @@
       
         <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
         @stack('scripts')
+        @if ($page->production)
+        <script async src="https://www.googletagmanager.com/gtag/js?id=GOOGLE-ANALAYTICS-ID"></script>
+        <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'GOOGLE-ANALAYTICS-ID');</script>
+        @endif
     </body>
 </html>
